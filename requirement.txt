@@ -1,0 +1,13 @@
+tqdm
+Pillow
+einops
+ema-pytorch
+accelerate
+matplotlib
+pynvml
+tensorboard
+einops-exts
+transformers
+imageio[ffmpeg]
+spacy
+-f git+https://github.com/hassony2/torch_videovision
