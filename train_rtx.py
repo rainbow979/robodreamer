@@ -12,8 +12,6 @@ os.environ['CURL_CA_BUNDLE'] = ''
 import datetime
 
 import logging
-from aimos_util import test_aimos
-
 
 def train():
     parser = argparse.ArgumentParser()
@@ -156,8 +154,6 @@ def train():
         pipeline=pipeline,
         start_multi=config.config['start_multi'],
     )
-    if total_process > 20:
-        test_aimos(rank, name=args.job_name)
     trainer.load('latest')
     if rank == 0:
         if total_process > 10:
